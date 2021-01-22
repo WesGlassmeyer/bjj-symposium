@@ -1,20 +1,45 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Video.css";
+//import Rating from "../Rating/Rating";
 
 export default function Video(props) {
+  let src = props.snippet.thumbnails.high
+    ? props.snippet.thumbnails.high.url
+    : props.snippet.thumbnails.default.url;
+
   return (
     <div className="Video">
       <h2 className="Video_title">
-        <Link to={`/video/${props.id}`}>{props.name}</Link>
+        <Link to={`/video/${props.id.videoId}`}>{props.snippet.title}</Link>
       </h2>
       <img
         id="img"
         className="style-scope yt-img-shadow"
         alt=""
         width="360"
-        src="https://i.ytimg.com/vi/GshEzcqlUbY/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&amp;rs=AOn4CLAWmWnbCV6ke2ZUH7zS_-_-laZQaw"
-      ></img>
+        src={src}
+      />
     </div>
   );
 }
+
+/*export default function Video(props) {
+  return (
+    <VideosContext.Consumer>
+      {(context) => (
+        <li className="Video">
+          <div className="Video_row">
+            <h3 className="Video_title">
+              <a href={props.url} target="_blank" rel="noopener noreferrer">
+                {props.title}
+              </a>
+            </h3>
+            <Rating value={props.rating} />
+          </div>
+          <p className="Video_description">{props.description}</p>
+        </li>
+      )}
+    </VideosContext.Consumer>
+  );
+}*/

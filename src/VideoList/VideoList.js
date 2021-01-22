@@ -12,7 +12,6 @@ class VideoList extends Component {
 
   render() {
     const { videos } = this.context;
-    console.log(videos.items);
     return (
       <section className="VideoList">
         <h2>Your videos</h2>
