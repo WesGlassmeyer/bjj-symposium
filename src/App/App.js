@@ -59,6 +59,7 @@ class App extends Component {
             value4="Guard"
           />
           <VideoList />
+          <VideoPage />
         </VideosContext.Provider>
       </main>
     );
