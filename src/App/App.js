@@ -5,6 +5,8 @@ import DropdownFilter from "../DropdownFilter/DropdownFilter";
 import config from "../config";
 import VideoList from "../VideoList/VideoList";
 import VideosContext from "../VideosContext";
+import VideoPage from "../VideoPage/VideoPage";
+import { Route } from "react-router-dom";
 
 class App extends Component {
   state = {
@@ -64,3 +66,5 @@ class App extends Component {
 }
 
 export default App;
+
+//<Route path="/video/:videoid" component={VideoPage} />
