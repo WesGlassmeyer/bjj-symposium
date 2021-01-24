@@ -4,10 +4,6 @@ import "./VideoList.css";
 import VideosContext from "../VideosContext";
 
 class VideoList extends Component {
-  static defaultProps = {
-    videos: [],
-  };
-
   static contextType = VideosContext;
 
   render() {
@@ -17,7 +13,7 @@ class VideoList extends Component {
         <h2>Your videos</h2>
         <ul className="VideoList__list" aria-live="polite">
           {videos.map((video) => (
-            <Video key={video.id.videoId} {...video} />
+            <Video key={video.id.videoId} video={video} />
           ))}
         </ul>
       </section>

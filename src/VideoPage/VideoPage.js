@@ -19,18 +19,17 @@ export default class VideoPage extends Component {
   };
 
   render() {
-    const { video = [] } = this.context;
+    const { videos = [] } = this.context;
     const { videoid } = this.props.match.params;
-    //const video = findVideo(Videos, videoid) || { content: "" };
+    const video = videos.find((video) => video.id.videoId === videoid);
     console.log(video);
     return (
       <section className="VideoPage">
         <Header />
-        <Video
-          id={videoid}
-          name={video.name}
-          //onDeleteNote={this.handleDeleteNote}
-        />
+        <div>
+          {videoid}
+          {video.snippet.title}
+        </div>
       </section>
     );
   }
@@ -46,3 +45,5 @@ export default class VideoPage extends Component {
 //        <p key={i}>{para}</p>
 //    ))}
 //</div>
+
+//{onDeleteNote={this.handleDeleteNote}}

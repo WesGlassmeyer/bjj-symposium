@@ -4,14 +4,16 @@ import "./Video.css";
 //import Rating from "../Rating/Rating";
 
 export default function Video(props) {
-  let src = props.snippet.thumbnails.high
-    ? props.snippet.thumbnails.high.url
-    : props.snippet.thumbnails.default.url;
+  let src = props.video.snippet.thumbnails.high
+    ? props.video.snippet.thumbnails.high.url
+    : props.video.snippet.thumbnails.default.url;
 
   return (
     <div className="Video">
       <h2 className="Video_title">
-        <Link to={`/video/${props.id.videoId}`}>{props.snippet.title}</Link>
+        <Link to={`/video/${props.video.id.videoId}`}>
+          {props.video.snippet.title}
+        </Link>
       </h2>
       <img
         id="img"

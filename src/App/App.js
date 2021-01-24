@@ -58,8 +58,8 @@ class App extends Component {
             value3="Side Control"
             value4="Guard"
           />
-          <VideoList />
-          <VideoPage />
+          <Route path="/" component={VideoList} />
+          <Route path="/video/:videoid" component={VideoPage} />
         </VideosContext.Provider>
       </main>
     );
@@ -67,5 +67,3 @@ class App extends Component {
 }
 
 export default App;
-
-//<Route path="/video/:videoid" component={VideoPage} />
