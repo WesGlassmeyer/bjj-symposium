@@ -51,14 +51,22 @@ class App extends Component {
       <main className="App">
         <VideosContext.Provider value={contextValue}>
           <Header />
-          <DropdownFilter
-            label="Choose a Position"
-            value1="Mount"
-            value2="Back Mount"
-            value3="Side Control"
-            value4="Guard"
+          <Route
+            exact
+            path="/"
+            render={() => (
+              <div>
+                <DropdownFilter
+                  label="Choose a Position"
+                  value1="Mount"
+                  value2="Back Mount"
+                  value3="Side Control"
+                  value4="Guard"
+                />
+                <VideoList />
+              </div>
+            )}
           />
-          <Route exact path="/" component={VideoList} />
           <Route exact path="/video/:videoId" component={VideoPage} />
         </VideosContext.Provider>
       </main>

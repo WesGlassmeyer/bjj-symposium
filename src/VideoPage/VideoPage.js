@@ -1,10 +1,9 @@
 import React, { Component } from "react";
 import Video from "../Video/Video";
 import VideosContext from "../VideosContext";
-//import { findVideo } from "../videos-helpers";
 import "./VideoPage.css";
 //import PropTypes from "prop-types";
-import Header from "../Header/Header";
+import Rating from "../Rating/Rating";
 
 export default class VideoPage extends Component {
   static defaultProps = {
@@ -13,25 +12,25 @@ export default class VideoPage extends Component {
     },
   };
   static contextType = VideosContext;
+  state = {
+    rating: 1,
+  };
 
-  handleDeleteVideo = (videoid) => {
-    this.props.history.push(`/`);
+  handleChangeRating = (e) => {
+    this.setState({ rating: e.target.value });
   };
 
   render() {
     const { videos } = this.context;
     const { videoId } = this.props.match.params;
+    const rating = this.state;
     const video = videos.find((video) => {
       return video.id.videoId === videoId;
     });
     return (
       <section className="VideoPage">
-        <Header />
         <Video video={video} />
-        <div>
-          {videoId}
-          {video.snippet.title}
-        </div>
+        <Rating value={this.state.rating} onClick={this.handleChangeRating} />
       </section>
     );
   }

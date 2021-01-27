@@ -10,7 +10,6 @@ class VideoList extends Component {
     const { videos } = this.context;
     return (
       <section className="VideoList">
-        <h2>Your videos</h2>
         <ul className="VideoList__list" aria-live="polite">
           {videos.map((video) => (
             <Video key={video.id.videoId} video={video} />
