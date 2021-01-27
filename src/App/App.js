@@ -58,7 +58,8 @@ class App extends Component {
             value3="Side Control"
             value4="Guard"
           />
-          <Route path="/" component={VideoList} />
+          <Route exact path="/" component={VideoList} />
+          <Route exact path="/video/:videoId" component={VideoPage} />
         </VideosContext.Provider>
       </main>
     );

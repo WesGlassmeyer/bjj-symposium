@@ -20,15 +20,16 @@ export default class VideoPage extends Component {
 
   render() {
     const { videos } = this.context;
-    const { videoid } = this.props.match.params;
-    const video = videos.find((video) => video.id.videoId === videoid);
-
+    const { videoId } = this.props.match.params;
+    const video = videos.find((video) => {
+      return video.id.videoId === videoId;
+    });
     return (
       <section className="VideoPage">
         <Header />
-        <Video />
+        <Video video={video} />
         <div>
-          {videoid}
+          {videoId}
           {video.snippet.title}
         </div>
       </section>
