@@ -26,6 +26,10 @@ export default class VideoPage extends Component {
     const video = videos.find((video) => {
       return video.id.videoId === videoId;
     });
+    if (!video) {
+      return <section className="VideoPage">Loading...</section>;
+    }
+
     return (
       <section className="VideoPage">
         <Video video={video} />
