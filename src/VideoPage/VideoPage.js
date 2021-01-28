@@ -18,19 +18,22 @@ export default class VideoPage extends Component {
 
   handleChangeRating = (e) => {
     this.setState({ rating: e.target.value });
+    console.log(e.target);
   };
 
   render() {
     const { videos } = this.context;
     const { videoId } = this.props.match.params;
-    const rating = this.state;
     const video = videos.find((video) => {
       return video.id.videoId === videoId;
     });
     return (
       <section className="VideoPage">
         <Video video={video} />
-        <Rating value={this.state.rating} onClick={this.handleChangeRating} />
+        <Rating
+          value={this.state.rating}
+          clickEvent={this.handleChangeRating}
+        />
       </section>
     );
   }
