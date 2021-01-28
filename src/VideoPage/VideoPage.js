@@ -17,8 +17,7 @@ export default class VideoPage extends Component {
   };
 
   handleChangeRating = (e) => {
-    this.setState({ rating: e.target.value });
-    console.log(e.target);
+    this.setState({ rating: parseInt(e.target.getAttribute("index")) + 1 });
   };
 
   render() {
