@@ -4,6 +4,33 @@ import "./Video.css";
 //import Rating from "../Rating/Rating";
 
 export default function Video(props) {
+  function renderVideoLink() {
+    const embedLink = "https://www.youtube.com/embed/" + props.video.id.videoId;
+    const renderVideoLink = props.renderVideoLink;
+    if (renderVideoLink === "false") {
+      return (
+        <img
+          id="img"
+          className="style-scope yt-img-shadow"
+          alt=""
+          width="360"
+          src={src}
+        />
+      );
+    } else {
+      return (
+        <iframe
+          width="560"
+          height="315"
+          src={embedLink}
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      );
+    }
+  }
+
   let src = props.video.snippet.thumbnails.high
     ? props.video.snippet.thumbnails.high.url
     : props.video.snippet.thumbnails.default.url;
@@ -15,13 +42,7 @@ export default function Video(props) {
           {props.video.snippet.title}
         </Link>
       </h2>
-      <img
-        id="img"
-        className="style-scope yt-img-shadow"
-        alt=""
-        width="360"
-        src={src}
-      />
+      {renderVideoLink()}
     </div>
   );
 }

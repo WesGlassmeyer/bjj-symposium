@@ -12,7 +12,11 @@ class VideoList extends Component {
       <section className="VideoList">
         <ul className="VideoList__list" aria-live="polite">
           {videos.map((video) => (
-            <Video key={video.id.videoId} video={video} />
+            <Video
+              key={video.id.videoId}
+              video={video}
+              renderVideoLink="false"
+            />
           ))}
         </ul>
       </section>
