@@ -12,6 +12,27 @@ class App extends Component {
   state = {
     videos: [],
     error: null,
+    dropdownFilter: {
+      touched: false,
+    },
+    newVideo: {
+      comment: {
+        touched: false,
+        value: "",
+      },
+    },
+  };
+  // i want the fetch query to be one thing on page load and then have the ability to change to another once you start selecting dropdown filters
+  // set up a conditional check if the drop down is touched
+  // set state drop down touched onchange of dropdown filters
+  // have that function take in the dropdown values and create a query String.
+
+  setDropdownStatus = (value) => {
+    this.setState({
+      dropdownFilter: {
+        touched: true,
+      },
+    });
   };
 
   setVideos = (videos) => {
@@ -21,14 +42,31 @@ class App extends Component {
     });
   };
 
+  updateVideoData = (input, value) => {
+    this.setState({
+      newVideo: {
+        ...this.state.newVideo,
+        [input]: {
+          touched: true,
+          value: value,
+        },
+      },
+    });
+  };
+
+  createQueryString = () => {
+    let queryString = "";
+    if (this.state.dropdownFilter.touched === true) {
+      queryString = "&part=snippet&q=bjj";
+    } else {
+      queryString = "&part=snippet&q=bjj,danaher,instructionals,bjjfanatics";
+    }
+    return queryString;
+  };
+
   componentDidMount() {
     const key = config.API_KEY;
-    fetch(
-      config.API_ENDPOINT +
-        "?key=" +
-        key +
-        "&part=snippet&q=bjj,danaher,instructionals,bjjfanatics"
-    )
+    fetch(config.API_ENDPOINT + "?key=" + key + this.createQueryString())
       .then((res) => {
         if (!res.ok) {
           return res.json().then((error) => Promise.reject(error));
@@ -45,6 +83,7 @@ class App extends Component {
   render() {
     const contextValue = {
       videos: this.state.videos,
+      updateVideoData: this.updateVideoData,
     };
 
     return (
