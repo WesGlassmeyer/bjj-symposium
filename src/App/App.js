@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import Header from "../Header/Header";
-import DropdownFilter from "../DropdownFilter/DropdownFilter";
+import DropdownForm from "../DropdownForm/DropdownForm";
 import config from "../config";
 import VideoList from "../VideoList/VideoList";
 import VideosContext from "../VideosContext";
@@ -28,12 +28,6 @@ class App extends Component {
     console.log(this.state.filterSelections);
   };
 
-  setQueryValues = (value) => {
-    this.setState({
-      queryValues: value,
-    });
-  };
-
   setVideos = (videos) => {
     this.setState({
       videos,
@@ -51,7 +45,7 @@ class App extends Component {
     return queryString;
   };
 
-  componentDidMount() {
+  fetchVideos = () => {
     const key = config.API_KEY;
     fetch(config.API_ENDPOINT + "?key=" + key + this.createQueryString())
       .then((res) => {
@@ -65,12 +59,17 @@ class App extends Component {
         console.error(error);
         this.setState({ error });
       });
+  };
+
+  componentDidMount() {
+    this.fetchVideos();
   }
 
   render() {
     const contextValue = {
       videos: this.state.videos,
       filterSelections: this.state.filterSelections,
+      setFilterSelections: this.setFilterSelections,
     };
 
     return (
@@ -82,13 +81,7 @@ class App extends Component {
             path="/"
             render={() => (
               <div>
-                <DropdownFilter
-                  label="Choose a Position"
-                  value1="Mount"
-                  value2="Back Mount"
-                  value3="Side Control"
-                  value4="Guard"
-                />
+                <DropdownForm onClick={this.fetchVideos} />
                 <VideoList />
               </div>
             )}
