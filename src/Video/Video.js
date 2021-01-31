@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Video.css";
-//import Rating from "../Rating/Rating";
 
 export default function Video(props) {
   function renderVideoLink() {
     const embedLink = "https://www.youtube.com/embed/" + props.video.id.videoId;
     const renderVideoLink = props.renderVideoLink;
+    const title = props.video.snippet.title;
     if (renderVideoLink === "false") {
       return (
         <img
@@ -20,12 +20,13 @@ export default function Video(props) {
     } else {
       return (
         <iframe
+          title={title}
           width="560"
           height="315"
           src={embedLink}
-          frameborder="0"
+          frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
+          allowFullScreen
         ></iframe>
       );
     }
