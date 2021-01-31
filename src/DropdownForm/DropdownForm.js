@@ -22,7 +22,7 @@ export default function DropdownForm(props) {
         value4="Triangle"
         value5="Leg LockS"
       />
-      <input type="submit" value="Submit" onClick={props.onClick} />
+      <input type="button" value="Submit" onClick={props.onClick} />
     </form>
   );
 }

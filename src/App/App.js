@@ -12,20 +12,14 @@ class App extends Component {
   state = {
     videos: [],
     error: null,
-    filterSelections: [],
-    newVideo: {
-      comment: {
-        touched: false,
-        value: "",
-      },
-    },
+    filterSelections: {},
   };
 
-  setFilterSelections = (value) => {
+  setFilterSelections = (value, filterType) => {
+    const { filterSelections } = this.state.filterSelections;
     this.setState({
-      filterSelections: [...this.state.filterSelections, value],
+      filterSelections: { ...filterSelections, [filterType]: value },
     });
-    console.log(this.state.filterSelections);
   };
 
   setVideos = (videos) => {
@@ -37,10 +31,10 @@ class App extends Component {
 
   createQueryString = () => {
     let queryString = "";
-    if (this.state.filterSelections.length > 0) {
-      queryString = this.state.filterSelections;
-    } else {
+    if (this.state.filterSelections === {}) {
       queryString = "&part=snippet&q=bjj,danaher,instructionals,bjjfanatics";
+    } else {
+      queryString = "&part=snippet&q=bjj," + this.state.filterSelections;
     }
     return queryString;
   };
@@ -94,4 +88,3 @@ class App extends Component {
 }
 
 export default App;
-//<Route path="/video/:videoid" component={VideoPage} />

@@ -11,7 +11,7 @@ export default function DropdownFilter(props) {
             className="dropdown"
             id={props.id}
             onChange={(event) => {
-              setFilterSelections(event.target.value);
+              setFilterSelections(event.target.value, props.id);
             }}
           >
             <option disabled selected value>
