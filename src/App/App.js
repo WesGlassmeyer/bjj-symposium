@@ -16,7 +16,7 @@ class App extends Component {
   };
 
   setFilterSelections = (value, filterType) => {
-    const { filterSelections } = this.state.filterSelections;
+    const { filterSelections } = this.state;
     this.setState({
       filterSelections: { ...filterSelections, [filterType]: value },
     });
@@ -31,10 +31,14 @@ class App extends Component {
 
   createQueryString = () => {
     let queryString = "";
-    if (this.state.filterSelections === {}) {
-      queryString = "&part=snippet&q=bjj,danaher,instructionals,bjjfanatics";
+    const { filterSelections } = this.state;
+    const filterSelectionValues = Object.values(filterSelections);
+    if (filterSelectionValues.length > 0) {
+      queryString = `&part=snippet&q=bjj,${Object.values(
+        filterSelectionValues
+      ).join(",")}`;
     } else {
-      queryString = "&part=snippet&q=bjj," + this.state.filterSelections;
+      queryString = "&part=snippet&q=bjj,danaher,instructionals,bjjfanatics";
     }
     return queryString;
   };
