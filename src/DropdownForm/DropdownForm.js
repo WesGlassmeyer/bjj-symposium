@@ -3,15 +3,29 @@ import "./DropdownForm.css";
 import DropdownFilter from "../DropdownFilter/DropdownFilter";
 
 export default function DropdownForm(props) {
+  const dropdownValues = {
+    positions: {
+      id: "positions",
+      label: "Choose a Position",
+      value: ["Mount", "Back Mount", "Side Control", "Guard"],
+    },
+    submissions: {
+      id: "submissions",
+      label: "Choose a Submission",
+      value: ["Choke", "Arm Bar", "Kimura", "Triangle", "Leg Locks"],
+    },
+    actions: {
+      id: "actions",
+      label: "Choose an Action ",
+      value: ["Escape", "Reversal", "Control", "Attack"],
+    },
+  };
   return (
     <form>
       <DropdownFilter
-        id="positions"
-        label="Choose a Position"
-        value1="Mount"
-        value2="Back Mount"
-        value3="Side Control"
-        value4="Guard"
+        id={dropdownValues.positions.id}
+        label={dropdownValues.positions.label}
+        value={dropdownValues.positions.value}
       />
       <DropdownFilter
         id="submissions"
@@ -20,7 +34,15 @@ export default function DropdownForm(props) {
         value2="Arm Bar"
         value3="Kimura"
         value4="Triangle"
-        value5="Leg LockS"
+        value5="Leg Locks"
+      />
+      <DropdownFilter
+        id="actions"
+        label="Choose an Action"
+        value1="Escape"
+        value2="Reversal"
+        value3="Control"
+        value4="Attack"
       />
       <input type="button" value="Submit" onClick={props.onClick} />
     </form>
