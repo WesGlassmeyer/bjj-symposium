@@ -28,21 +28,14 @@ export default function DropdownForm(props) {
         value={dropdownValues.positions.value}
       />
       <DropdownFilter
-        id="submissions"
-        label="Choose an Submission"
-        value1="Choke"
-        value2="Arm Bar"
-        value3="Kimura"
-        value4="Triangle"
-        value5="Leg Locks"
+        id={dropdownValues.submissions.id}
+        label={dropdownValues.submissions.label}
+        value={dropdownValues.submissions.value}
       />
       <DropdownFilter
-        id="actions"
-        label="Choose an Action"
-        value1="Escape"
-        value2="Reversal"
-        value3="Control"
-        value4="Attack"
+        id={dropdownValues.actions.id}
+        label={dropdownValues.actions.label}
+        value={dropdownValues.actions.value}
       />
       <input type="button" value="Submit" onClick={props.onClick} />
     </form>
