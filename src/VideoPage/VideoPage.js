@@ -3,8 +3,7 @@ import Video from "../Video/Video";
 import VideosContext from "../VideosContext";
 import "./VideoPage.css";
 //import PropTypes from "prop-types";
-import Rating from "../Rating/Rating";
-import TagBox from "../TagBox/TagBox";
+import VideoPageForm from "../VideoPageForm/VideoPageForm";
 
 export default class VideoPage extends Component {
   static defaultProps = {
@@ -34,11 +33,8 @@ export default class VideoPage extends Component {
     return (
       <section className="VideoPage">
         <Video video={video} />
-        <Rating
-          value={this.state.rating}
-          clickEvent={this.handleChangeRating}
-        />
-        <TagBox />
+
+        <VideoPageForm />
       </section>
     );
   }
