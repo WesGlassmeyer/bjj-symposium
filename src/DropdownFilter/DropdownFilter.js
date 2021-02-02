@@ -19,8 +19,9 @@ export default function DropdownFilter(props) {
             onChange={(event) => {
               setFilterSelections(event.target.value, props.id);
             }}
+            defaultValue={"DEFAULT"}
           >
-            <option disabled selected value>
+            <option disabled value="DEFAULT">
               {" "}
               -- {props.label} --{" "}
             </option>
