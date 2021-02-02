@@ -47,23 +47,3 @@ export default function Video(props) {
     </div>
   );
 }
-
-/*export default function Video(props) {
-  return (
-    <VideosContext.Consumer>
-      {(context) => (
-        <li className="Video">
-          <div className="Video_row">
-            <h3 className="Video_title">
-              <a href={props.url} target="_blank" rel="noopener noreferrer">
-                {props.title}
-              </a>
-            </h3>
-            <Rating value={props.rating} />
-          </div>
-          <p className="Video_description">{props.description}</p>
-        </li>
-      )}
-    </VideosContext.Consumer>
-  );
-}*/

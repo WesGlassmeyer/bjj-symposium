@@ -44,11 +44,3 @@ export default class VideoPage extends Component {
 //history: PropTypes.object,
 //match: PropTypes.object,
 //};
-
-//<div className="VideoPage_content">
-//       {video.content.split(/\n \r|\n/).map((para, i) => (
-//        <p key={i}>{para}</p>
-//    ))}
-//</div>
-
-//{onDeleteNote={this.handleDeleteNote}}
