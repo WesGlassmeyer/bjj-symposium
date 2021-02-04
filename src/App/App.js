@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Link } from "react";
 import "./App.css";
 import Header from "../Header/Header";
 import DropdownForm from "../DropdownForm/DropdownForm";
@@ -7,6 +7,8 @@ import VideoList from "../VideoList/VideoList";
 import VideosContext from "../VideosContext";
 import VideoPage from "../VideoPage/VideoPage";
 import { Route } from "react-router-dom";
+import FavLink from "../FavLink/FavLink";
+import FavPage from "../FavPage/FavPage";
 
 class App extends Component {
   state = {
@@ -74,11 +76,15 @@ class App extends Component {
       <main className="App">
         <VideosContext.Provider value={contextValue}>
           <Header />
+
+          <Route exact path="/community_favorites" component={FavPage} />
+
           <Route
             exact
             path="/"
             render={() => (
               <div>
+                <FavLink />
                 <DropdownForm onClick={this.fetchVideos} />
                 <VideoList />
               </div>

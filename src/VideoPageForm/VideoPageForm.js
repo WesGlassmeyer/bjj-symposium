@@ -33,11 +33,16 @@ export default class VideoPageForm extends Component {
   handleSubmit = (event) => {
     console.log(this.state);
     event.preventDefault();
+    alert("Your selection has been added to the Community Favorites Page.");
   };
 
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
+        <p>
+          Select a rating and the tags below to add this video to the Community
+          Resource Page
+        </p>
         <TagBox onClick={this.handleChangeTag} />
         <Rating
           value={this.state.rating}
