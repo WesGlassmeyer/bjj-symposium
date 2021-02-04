@@ -41,7 +41,7 @@ export default class VideoPageForm extends Component {
       <form onSubmit={this.handleSubmit}>
         <p>
           Select a rating and the tags below to add this video to the Community
-          Resource Page
+          Favorites Page
         </p>
         <TagBox onClick={this.handleChangeTag} />
         <Rating
