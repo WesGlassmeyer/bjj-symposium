@@ -4,6 +4,8 @@ import VideosContext from "../VideosContext";
 import "./VideoPage.css";
 //import PropTypes from "prop-types";
 import VideoPageForm from "../VideoPageForm/VideoPageForm";
+import FavLink from "../FavLink/FavLink";
+import Header from "../Header/Header";
 
 export default class VideoPage extends Component {
   static defaultProps = {
@@ -32,6 +34,7 @@ export default class VideoPage extends Component {
 
     return (
       <section className="VideoPage">
+        <FavLink />
         <Video video={video} />
 
         <VideoPageForm />
