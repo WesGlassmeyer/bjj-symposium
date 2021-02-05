@@ -150,6 +150,8 @@ const dummydata = {
       },
     },
     {
+      rating: 5,
+      tags: ["Side Control", "Reversal"],
       kind: "youtube#searchResult",
       etag: "LXGPEK6cs1bQ22gkdXV1-imeNjM",
       id: {
