@@ -5,7 +5,6 @@ import "./VideoPage.css";
 //import PropTypes from "prop-types";
 import VideoPageForm from "../VideoPageForm/VideoPageForm";
 import FavLink from "../FavLink/FavLink";
-import Header from "../Header/Header";
 
 export default class VideoPage extends Component {
   static defaultProps = {
