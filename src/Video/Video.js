@@ -19,6 +19,7 @@ export default function Video(props) {
     } else {
       return (
         <iframe
+          className="responsive-iframe"
           title={title}
           width="300"
           height="169"
