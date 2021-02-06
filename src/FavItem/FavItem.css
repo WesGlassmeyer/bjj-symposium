@@ -1,8 +1,21 @@
-li {
-  margin: 0px;
+.fav-item {
+  margin: 0 0 20px 0;
   display: flex;
   width: 100%;
 }
 
+.Fav-page-tags {
+  margin: 5%;
+}
+
+.style-scope {
+  height: 15vh;
+  width: auto;
+}
+
 .text-flex {
+  display: flex !important;
+  width: 50%;
+  margin-left: 10%;
+  flex-direction: column;
 }

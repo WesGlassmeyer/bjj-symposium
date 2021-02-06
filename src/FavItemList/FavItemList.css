@@ -1,3 +1,9 @@
+.FavItemList {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
 ul {
   margin: 5% 5% 5% 5%;
 }
