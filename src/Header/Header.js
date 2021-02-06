@@ -6,7 +6,7 @@ export default function Header() {
   return (
     <header className="App_header">
       <h1>
-        <Link to="/">BJJ Symposium</Link>
+        <Link to="/search">BJJ Symposium</Link>
       </h1>
     </header>
   );
