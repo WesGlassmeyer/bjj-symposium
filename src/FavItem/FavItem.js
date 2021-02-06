@@ -4,9 +4,8 @@ import Rating from "../Rating/Rating";
 
 export default function FavItem(props) {
   return (
-    <div>
+    <li>
       <img
-        id="img"
         className="style-scope yt-img-shadow"
         alt=""
         width="120"
@@ -18,6 +17,6 @@ export default function FavItem(props) {
       </Link>
       <Rating value={props.favItem && props.favItem.rating} />
       <p>tags:{props.favItem && props.favItem.tags.join()}</p>
-    </div>
+    </li>
   );
 }
