@@ -22,7 +22,7 @@ export default function DropdownForm(props) {
   };
   return (
     <form>
-      <label>Select from these drop downs to search for more videos</label>
+      <label>Select from these drop downs to search for more videos:</label>
       <DropdownFilter
         id={dropdownValues.positions.id}
         label={dropdownValues.positions.label}
