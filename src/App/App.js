@@ -9,6 +9,7 @@ import VideoPage from "../VideoPage/VideoPage";
 import { Route } from "react-router-dom";
 import FavLink from "../FavLink/FavLink";
 import FavPage from "../FavPage/FavPage";
+import LandingPage from "../LandingPage/LandingPage";
 
 class App extends Component {
   state = {
@@ -76,12 +77,13 @@ class App extends Component {
       <main className="App">
         <VideosContext.Provider value={contextValue}>
           <Header />
+          <Route exact path="/" component={LandingPage} />
 
           <Route exact path="/community_favorites" component={FavPage} />
 
           <Route
             exact
-            path="/"
+            path="/search"
             render={() => (
               <div>
                 <FavLink />
