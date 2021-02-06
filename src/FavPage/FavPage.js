@@ -5,7 +5,7 @@ export default class FavPage extends Component {
   render() {
     return (
       <div>
-        <h3>Community Favorites Page</h3>
+        <h2>Community Favorites Page</h2>
 
         <FavItemList />
       </div>
