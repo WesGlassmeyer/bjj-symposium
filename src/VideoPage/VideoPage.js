@@ -34,8 +34,9 @@ export default class VideoPage extends Component {
     return (
       <section className="VideoPage">
         <FavLink />
-        <Video video={video} />
-
+        <ul>
+          <Video video={video} />
+        </ul>
         <VideoPageForm />
       </section>
     );
