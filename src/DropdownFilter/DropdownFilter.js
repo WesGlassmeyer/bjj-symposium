@@ -14,6 +14,7 @@ export default function DropdownFilter(props) {
       {({ setFilterSelections }) => (
         <>
           <select
+            aria-label={props.id}
             className="dropdown"
             id={props.id}
             onChange={(event) => {
