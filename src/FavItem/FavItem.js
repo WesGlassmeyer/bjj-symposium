@@ -1,12 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Rating from "../Rating/Rating";
+import "./FavItem.css";
 
 export default function FavItem(props) {
   return (
-    <li>
+    <li className="fav-item">
       <img
-        className="style-scope yt-img-shadow"
+        className="style-scope yt-img-shadow fav-page-img"
         alt=""
         width="90"
         src={props.favItem && props.favItem.snippet.thumbnails.default.url}
@@ -16,7 +17,9 @@ export default function FavItem(props) {
           {props.favItem && props.favItem.snippet.title}
         </Link>
         <Rating value={props.favItem && props.favItem.rating} />
-        <p>tags:{props.favItem && props.favItem.tags.join()}</p>
+        <p className="Fav-page-tags">
+          Tags: {props.favItem && props.favItem.tags.join(", ")}
+        </p>
       </div>
     </li>
   );
