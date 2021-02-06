@@ -11,8 +11,8 @@ export default function Video(props) {
       return (
         <img
           className="style-scope yt-img-shadow"
-          alt=""
-          width="360"
+          alt={title}
+          width="200"
           src={src}
         />
       );
@@ -20,8 +20,8 @@ export default function Video(props) {
       return (
         <iframe
           title={title}
-          width="560"
-          height="315"
+          width="300"
+          height="169"
           src={embedLink}
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -42,7 +42,7 @@ export default function Video(props) {
           {props.video.snippet.title}
         </Link>
       </h2>
-      {renderVideoLink()}
+      <div className="Video_link">{renderVideoLink()}</div>
     </li>
   );
 }
