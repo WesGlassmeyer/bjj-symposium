@@ -9,7 +9,7 @@ export default function TagBox(props) {
   return (
     <div>
       <div>
-        <label>Positions:</label>
+        <label className="video-page-tag-label">Positions:</label>
         <br></br>
         {positions.map((position) => (
           <>
@@ -24,7 +24,7 @@ export default function TagBox(props) {
           </>
         ))}
       </div>
-      <label>Submissions:</label>
+      <label className="video-page-tag-label">Submissions:</label>
       <br></br>
       <div>
         {submissions.map((submission) => (
@@ -40,6 +40,7 @@ export default function TagBox(props) {
           </>
         ))}
       </div>
+      <label className="video-page-tag-label">Actions:</label>
       <div>
         {actions.map((action) => (
           <>
