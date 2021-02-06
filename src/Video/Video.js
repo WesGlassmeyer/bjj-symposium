@@ -9,25 +9,29 @@ export default function Video(props) {
     const title = props.video.snippet.title;
     if (renderVideoLink === "false") {
       return (
-        <img
-          className="style-scope yt-img-shadow"
-          alt={title}
-          width="200"
-          src={src}
-        />
+        <div className="Video_image">
+          <img
+            className="style-scope yt-img-shadow"
+            alt={title}
+            width="200"
+            src={src}
+          />
+        </div>
       );
     } else {
       return (
-        <iframe
-          className="responsive-iframe"
-          title={title}
-          width="300"
-          height="169"
-          src={embedLink}
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        ></iframe>
+        <div className="Video_link">
+          <iframe
+            className="responsive-iframe"
+            title={title}
+            width="300"
+            height="169"
+            src={embedLink}
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </div>
       );
     }
   }
@@ -43,7 +47,7 @@ export default function Video(props) {
           {props.video.snippet.title}
         </Link>
       </h2>
-      <div className="Video_link">{renderVideoLink()}</div>
+      {renderVideoLink()}
     </li>
   );
 }
