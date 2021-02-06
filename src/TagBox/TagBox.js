@@ -8,44 +8,141 @@ export default function TagBox(props) {
 
   return (
     <div>
-      {positions.map((position) => (
-        <>
-          <input
-            type="checkbox"
-            key={position}
-            value={position}
-            onChange={props.onClick}
-            aria-label={position}
-          />
-          <label htmlFor={position}> {position}</label>
-        </>
-      ))}
-
-      {submissions.map((submission) => (
-        <>
-          <input
-            type="checkbox"
-            key={submission}
-            value={submission}
-            onChange={props.onClick}
-            aria-label={submission}
-          />
-          <label htmlFor={submission}> {submission}</label>
-        </>
-      ))}
-
-      {actions.map((action) => (
-        <>
-          <input
-            type="checkbox"
-            key={action}
-            value={action}
-            onChange={props.onClick}
-            aria-label={action}
-          />
-          <label htmlFor={action}> {action}</label>
-        </>
-      ))}
+      <div>
+        <label>Positions:</label>
+        <br></br>
+        {positions.map((position) => (
+          <>
+            <input
+              type="checkbox"
+              key={position}
+              value={position}
+              onChange={props.onClick}
+              aria-label={position}
+            />
+            <label htmlFor={position}> {position}</label>
+          </>
+        ))}
+      </div>
+      <label>Submissions:</label>
+      <br></br>
+      <div>
+        {submissions.map((submission) => (
+          <>
+            <input
+              type="checkbox"
+              key={submission}
+              value={submission}
+              onChange={props.onClick}
+              aria-label={submission}
+            />
+            <label htmlFor={submission}> {submission}</label>
+          </>
+        ))}
+      </div>
+      <div>
+        {actions.map((action) => (
+          <>
+            <input
+              type="checkbox"
+              key={action}
+              value={action}
+              onChange={props.onClick}
+              aria-label={action}
+            />
+            <label htmlFor={action}> {action}</label>
+          </>
+        ))}
+      </div>
     </div>
   );
 }
+
+//  <div>
+//         <label>Positions:</label>
+//         <br></br>
+//         {positions.map((position) => (
+//           <>
+//             <input
+//               type="checkbox"
+//               key={position}
+//               value={position}
+//               onChange={props.onClick}
+//               aria-label={position}
+//             />
+//             <label htmlFor={position}> {position}</label>
+//           </>
+//         ))}
+//       </div>
+//       <label>Submissions:</label>
+//       <br></br>
+//       <div>
+//         {submissions.map((submission) => (
+//           <>
+//             <input
+//               type="checkbox"
+//               key={submission}
+//               value={submission}
+//               onChange={props.onClick}
+//               aria-label={submission}
+//             />
+//             <label htmlFor={submission}> {submission}</label>
+//           </>
+//         ))}
+//       </div>
+//       <div>
+//         {actions.map((action) => (
+//           <>
+//             <input
+//               type="checkbox"
+//               key={action}
+//               value={action}
+//               onChange={props.onClick}
+//               aria-label={action}
+//             />
+//             <label htmlFor={action}> {action}</label>
+//           </>
+//         ))}
+//       </div>
+
+// <div>
+// <label for="tags">Tags:</label>
+// <select name="tags" id="tags">
+//   <optgroup label="Positions">
+//     {positions.map((position) => (
+//       <option
+//         key={position}
+//         value={position}
+//         onChange={props.onClick}
+//         aria-label={position}
+//       >
+//         {position}
+//       </option>
+//     ))}
+//   </optgroup>
+//   <optgroup label="Submissions">
+//     {submissions.map((submission) => (
+//       <option
+//         key={submission}
+//         value={submission}
+//         onChange={props.onClick}
+//         aria-label={submission}
+//       >
+//         {submission}
+//       </option>
+//     ))}
+//   </optgroup>
+//   <optgroup label="actions">
+//     {actions.map((action) => (
+//       <option
+//         key={action}
+//         value={action}
+//         onChange={props.onClick}
+//         aria-label={action}
+//       >
+//         {action}
+//       </option>
+//     ))}
+//   </optgroup>
+// </select>
+// </div>
