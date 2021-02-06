@@ -10,7 +10,6 @@ export default function Video(props) {
     if (renderVideoLink === "false") {
       return (
         <img
-          id="img"
           className="style-scope yt-img-shadow"
           alt=""
           width="360"
@@ -37,13 +36,13 @@ export default function Video(props) {
     : props.video.snippet.thumbnails.default.url;
 
   return (
-    <div className="Video">
+    <li className="Video">
       <h2 className="Video_title">
         <Link to={`/video/${props.video.id.videoId}`}>
           {props.video.snippet.title}
         </Link>
       </h2>
       {renderVideoLink()}
-    </div>
+    </li>
   );
 }
