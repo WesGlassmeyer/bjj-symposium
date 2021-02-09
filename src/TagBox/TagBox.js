@@ -12,47 +12,44 @@ export default function TagBox(props) {
         <label className="video-page-tag-label">Positions:</label>
         <br></br>
         {positions.map((position) => (
-          <>
+          <React.Fragment key={position}>
             <input
               type="checkbox"
-              key={position}
               value={position}
               onChange={props.onClick}
               aria-label={position}
             />
             <label htmlFor={position}> {position}</label>
-          </>
+          </React.Fragment>
         ))}
       </div>
       <label className="video-page-tag-label">Submissions:</label>
       <br></br>
       <div>
         {submissions.map((submission) => (
-          <>
+          <React.Fragment key={submission}>
             <input
               type="checkbox"
-              key={submission}
               value={submission}
               onChange={props.onClick}
               aria-label={submission}
             />
             <label htmlFor={submission}> {submission}</label>
-          </>
+          </React.Fragment>
         ))}
       </div>
       <label className="video-page-tag-label">Actions:</label>
       <div>
         {actions.map((action) => (
-          <>
+          <React.Fragment key={action}>
             <input
               type="checkbox"
-              key={action}
               value={action}
               onChange={props.onClick}
               aria-label={action}
             />
             <label htmlFor={action}> {action}</label>
-          </>
+          </React.Fragment>
         ))}
       </div>
     </div>
