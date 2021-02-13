@@ -10,11 +10,11 @@ export default function FavItem(props) {
         className="style-scope yt-img-shadow fav-page-img"
         alt=""
         width="90"
-        src={props.favItem && props.favItem.snippet.thumbnails.default.url}
+        src={props.favItem && props.favItem.thumbnail}
       />
       <div className="text-flex">
-        <Link to={`/video/${props.favItem && props.favItem.id.videoId}`}>
-          {props.favItem && props.favItem.snippet.title}
+        <Link to={`/video/${props.favItem && props.favItem.youtube_id}`}>
+          {props.favItem && props.favItem.title}
         </Link>
         <Rating value={props.favItem && props.favItem.rating} />
         <p className="Fav-page-tags">
