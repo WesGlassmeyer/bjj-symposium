@@ -25,6 +25,7 @@ export default class VideoPage extends Component {
     const { videos } = this.context;
     const { videoId } = this.props.match.params;
     const video = videos.find((video) => {
+      console.log(video);
       return video.id.videoId === videoId;
     });
     if (!video) {
@@ -37,7 +38,7 @@ export default class VideoPage extends Component {
         <ul>
           <Video video={video} />
         </ul>
-        <VideoPageForm />
+        <VideoPageForm video={video} />
       </section>
     );
   }
