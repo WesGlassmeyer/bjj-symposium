@@ -3,12 +3,32 @@ import "./VideoPageForm.css";
 import Rating from "../Rating/Rating";
 import TagBox from "../TagBox/TagBox";
 import VideosContext from "../VideosContext";
+import config from "../config";
 
 export default class VideoPageForm extends Component {
   static contextType = VideosContext;
   state = {
     rating: 1,
     tags: [],
+  };
+
+  addItem = (item) => {
+    fetch(`${config.SERVER_endpoint}/fav_items`, {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({ item }),
+    })
+      .then((response) => {
+        if (!response.ok)
+          return response.json().then((error) => Promise.reject(error));
+        return response.json();
+      })
+      // .then((data) => this.context.addFolder(data))
+      .catch((error) => {
+        console.error({ error });
+      });
   };
 
   handleChangeRating = (e) => {
@@ -33,6 +53,8 @@ export default class VideoPageForm extends Component {
   handleSubmit = (event) => {
     console.log(this.state);
     event.preventDefault();
+    const newItem = this.state;
+    this.addItem(newItem);
     alert("Your selection has been added to the Community Favorites Page.");
   };
 
