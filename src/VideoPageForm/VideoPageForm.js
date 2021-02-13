@@ -13,7 +13,7 @@ export default class VideoPageForm extends Component {
   };
 
   addItem = (item) => {
-    fetch(`${config.SERVER_endpoint}/fav_items`, {
+    fetch(`${config.SERVER_endpoint}`, {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -52,6 +52,7 @@ export default class VideoPageForm extends Component {
 
   handleSubmit = (event) => {
     console.log(this.state);
+    console.log(this.props);
     event.preventDefault();
     const newItem = this.state;
     this.addItem(newItem);
