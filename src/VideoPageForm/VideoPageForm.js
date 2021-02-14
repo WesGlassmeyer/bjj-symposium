@@ -8,6 +8,9 @@ import config from "../config";
 export default class VideoPageForm extends Component {
   static contextType = VideosContext;
   state = {
+    title: this.props.video.snippet.title,
+    thumbnail: this.props.video.snippet.thumbnails.default.url,
+    youtube_id: this.props.video.id.videoId,
     rating: 1,
     tags: [],
   };
@@ -36,7 +39,6 @@ export default class VideoPageForm extends Component {
   };
 
   handleChangeTag = (e) => {
-    console.log(e.target.value, e.target.checked);
     if (e.target.checked) {
       this.setState({
         tags: [...this.state.tags, e.target.value],
@@ -52,7 +54,6 @@ export default class VideoPageForm extends Component {
 
   handleSubmit = (event) => {
     console.log(this.state);
-    console.log(this.props);
     event.preventDefault();
     const newItem = this.state;
     this.addItem(newItem);
