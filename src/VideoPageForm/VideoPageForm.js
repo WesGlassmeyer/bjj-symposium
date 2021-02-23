@@ -21,7 +21,13 @@ export default class VideoPageForm extends Component {
       headers: {
         "content-type": "application/json",
       },
-      body: JSON.stringify({ item }),
+      body: JSON.stringify({
+        title: item.title,
+        thumbnail: item.thumbnail,
+        youtube_id: item.youtube_id,
+        rating: item.rating,
+        tags: item.tags,
+      }),
     })
       .then((response) => {
         if (!response.ok)
@@ -53,7 +59,6 @@ export default class VideoPageForm extends Component {
   };
 
   handleSubmit = (event) => {
-    console.log(this.state);
     event.preventDefault();
     const newItem = this.state;
     this.addItem(newItem);
