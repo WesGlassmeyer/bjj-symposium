@@ -21,7 +21,7 @@ class FavItemList extends Component {
         if (!res.ok) {
           return res.json().then((error) => Promise.reject(error));
         }
-        console.log(res);
+
         return res.json();
       })
       .then((res) => this.setVideos(res))
@@ -33,7 +33,6 @@ class FavItemList extends Component {
 
   render() {
     const favItems = this.state.videos;
-    console.log(this.state.videos);
 
     return (
       <section className="FavItemList">
