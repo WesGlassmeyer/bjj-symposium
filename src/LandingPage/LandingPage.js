@@ -6,9 +6,10 @@ export default function LandingPage() {
   return (
     <div>
       <p>
-        Welcome to BJJ Symposium! Our app allows you to search for BJJ videos
-        from YouTube. If you find a video you think is valuable, you can rate
-        it, apply tags and commit it to the Community Favorites Page.{" "}
+        Welcome to BJJ Symposium! Our app allows you to search for Brazilian Jiu
+        Jitsu videos from YouTube. If you find a video you think is valuable,
+        you can rate it, apply tags and commit it to the Community Favorites
+        Page.{" "}
       </p>
       <p>
         There are so many BJJ videos out there. We thought it would be useful to
