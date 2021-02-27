@@ -42,11 +42,11 @@ export default function Video(props) {
 
   return (
     <li className="Video">
-      <h2 className="Video_title">
+      <h3 className="Video_title">
         <Link to={`/video/${props.video.id.videoId}`}>
           {props.video.snippet.title}
         </Link>
-      </h2>
+      </h3>
       {renderVideoLink()}
     </li>
   );
