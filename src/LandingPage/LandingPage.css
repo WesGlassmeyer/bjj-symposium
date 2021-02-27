@@ -1,3 +1,48 @@
 p {
-  margin: 10%;
+  margin: 10% 10% 5%;
+}
+
+.welcome p {
+  background-color: #af0000;
+  color: white;
+  padding: 5%;
+  text-align: left;
+  border-radius: 20px;
+}
+.welcome span {
+  background-color: #af0000;
+  color: white;
+}
+
+#title {
+  text-align: center;
+}
+
+.button1 {
+  color: white;
+  border: 2px solid #af0000;
+  width: 150px;
+  margin: 1%;
+  border-radius: 6px;
+}
+button:hover {
+  color: #af0000;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+.button1 a:visited {
+  color: white;
+}
+
+a:hover {
+  color: #af0000;
+}
+
+.landing-page-button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
