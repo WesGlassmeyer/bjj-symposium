@@ -21,8 +21,8 @@ export default function DropdownForm(props) {
     },
   };
   return (
-    <form>
-      <label>Select from these drop downs to search for more videos:</label>
+    <form className="dropdown_column">
+      <label>Refine your search:</label>
       <DropdownFilter
         id={dropdownValues.positions.id}
         label={dropdownValues.positions.label}
@@ -38,7 +38,12 @@ export default function DropdownForm(props) {
         label={dropdownValues.actions.label}
         value={dropdownValues.actions.value}
       />
-      <input type="button" value="Submit" onClick={props.onClick} />
+      <input
+        className="submit drop-down-input"
+        type="button"
+        value="Submit"
+        onClick={props.onClick}
+      />
     </form>
   );
 }
