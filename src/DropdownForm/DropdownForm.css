@@ -2,6 +2,24 @@ form {
   margin: 5% 10% 5% 10%;
 }
 
-input {
+.drop-down-input {
+  display: flex;
+  justify-content: center;
   margin-top: 15px;
+  color: white;
+  border: 2px solid #af0000;
+  border-radius: 6px;
+  width: 60px;
+  height: 30px;
+}
+
+.dropdown_column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+label {
+  color: white;
 }
