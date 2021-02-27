@@ -1,0 +1,15 @@
+.video-page-label {
+  padding-bottom: 5%;
+}
+
+.video-page-input {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  color: white;
+  border: 2px solid #af0000;
+  border-radius: 6px;
+  width: 60px;
+  height: 30px;
+  align-items: center;
+}
