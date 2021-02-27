@@ -68,16 +68,13 @@ export default class VideoPageForm extends Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <label>
-          Select a rating and the tags below to add this video to the Community
-          Favorites Page:
-        </label>
+        <label className="video-page-label">Select tags and rating:</label>
         <TagBox onClick={this.handleChangeTag} />
         <Rating
           value={this.state.rating}
           clickEvent={this.handleChangeRating}
         />
-        <input type="submit" value="Submit" />
+        <input className="video-page-input" type="submit" value="Submit" />
       </form>
     );
   }
