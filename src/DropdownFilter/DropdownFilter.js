@@ -12,7 +12,7 @@ export default function DropdownFilter(props) {
   return (
     <VideosContext.Consumer>
       {({ setFilterSelections }) => (
-        <>
+        <div className="custom-select">
           <select
             aria-label={props.id}
             className="dropdown"
@@ -28,7 +28,7 @@ export default function DropdownFilter(props) {
             </option>
             {optionItems}
           </select>
-        </>
+        </div>
       )}
     </VideosContext.Consumer>
   );
