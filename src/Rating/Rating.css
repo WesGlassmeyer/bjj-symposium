@@ -1,5 +1,7 @@
 .rating {
-  color: #af0000;
+  color: white;
   padding: 0 1px;
   margin: 5%;
+  margin-left: 32%;
+  font-size: 18px;
 }
