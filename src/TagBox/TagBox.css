@@ -2,3 +2,24 @@
   margin-top: 5%;
   text-align: left;
 }
+
+.checkbox label {
+  display: inline-block;
+  padding-right: 10px;
+  white-space: nowrap;
+}
+.checkbox input {
+  vertical-align: middle;
+}
+.checkbox label span {
+  vertical-align: middle;
+}
+
+.tag-container {
+  margin: 2% 0 2% 0;
+}
+
+input[type="checkbox"]#checkbox:checked {
+  border-color: red;
+  background-color: red;
+}
