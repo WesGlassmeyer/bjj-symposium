@@ -1,13 +1,12 @@
 import React, { Component } from "react";
 import "./App.css";
-import Header from "../Header/Header";
+import Navbar from "../Navbar/Navbar";
 import DropdownForm from "../DropdownForm/DropdownForm";
 import config from "../config";
 import VideoList from "../VideoList/VideoList";
 import VideosContext from "../VideosContext";
 import VideoPage from "../VideoPage/VideoPage";
 import { Route } from "react-router-dom";
-import FavLink from "../FavLink/FavLink";
 import FavPage from "../FavPage/FavPage";
 import LandingPage from "../LandingPage/LandingPage";
 
@@ -76,7 +75,7 @@ class App extends Component {
     return (
       <main className="App">
         <VideosContext.Provider value={contextValue}>
-          <Header />
+          <Navbar />
           <Route exact path="/" component={LandingPage} />
 
           <Route exact path="/community_favorites" component={FavPage} />
@@ -86,7 +85,6 @@ class App extends Component {
             path="/search"
             render={() => (
               <div>
-                <FavLink />
                 <DropdownForm onClick={this.fetchVideos} />
                 <VideoList />
               </div>
