@@ -7,10 +7,10 @@
 
 .responsive-iframe {
   position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+  top: 1%;
+  left: 1%;
+  bottom: 1%;
+  right: 1%;
   width: 100%;
   height: 100%;
 }
@@ -27,4 +27,14 @@
   border: 1px solid rgba(175, 0, 0, 0.5);
   box-shadow: 0 0 20px #af0000;
   margin-top: 10%;
+}
+
+.Video_img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-page-img {
+  margin-left: 25%;
 }
