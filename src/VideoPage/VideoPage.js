@@ -2,9 +2,8 @@ import React, { Component } from "react";
 import Video from "../Video/Video";
 import VideosContext from "../VideosContext";
 import "./VideoPage.css";
-//import PropTypes from "prop-types";
 import VideoPageForm from "../VideoPageForm/VideoPageForm";
-import FavLink from "../FavLink/FavLink";
+//import PropTypes from "prop-types";
 
 export default class VideoPage extends Component {
   static defaultProps = {
@@ -33,7 +32,6 @@ export default class VideoPage extends Component {
 
     return (
       <section className="VideoPage">
-        <FavLink />
         <ul>
           <Video video={video} />
         </ul>
