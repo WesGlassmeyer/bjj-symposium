@@ -8,12 +8,13 @@ export default function TagBox(props) {
 
   return (
     <div>
-      <div>
+      <div className="tag-container">
         <label className="video-page-tag-label">Positions:</label>
         <br></br>
         {positions.map((position) => (
           <React.Fragment key={position}>
             <input
+              id="checkbox"
               type="checkbox"
               value={position}
               onChange={props.onClick}
@@ -23,34 +24,41 @@ export default function TagBox(props) {
           </React.Fragment>
         ))}
       </div>
-      <label className="video-page-tag-label">Submissions:</label>
-      <br></br>
-      <div>
-        {submissions.map((submission) => (
-          <React.Fragment key={submission}>
-            <input
-              type="checkbox"
-              value={submission}
-              onChange={props.onClick}
-              aria-label={submission}
-            />
-            <label htmlFor={submission}> {submission}</label>
-          </React.Fragment>
-        ))}
+      <div className="tag-container">
+        <label className="video-page-tag-label">Submissions:</label>
+        <br></br>
+        <div className="checkbox">
+          {submissions.map((submission) => (
+            <React.Fragment key={submission}>
+              <label htmlFor={submission}>
+                <input
+                  type="checkbox"
+                  value={submission}
+                  onChange={props.onClick}
+                  aria-label={submission}
+                />
+                <span>{submission}</span>
+              </label>
+            </React.Fragment>
+          ))}
+        </div>
       </div>
-      <label className="video-page-tag-label">Actions:</label>
-      <div>
-        {actions.map((action) => (
-          <React.Fragment key={action}>
-            <input
-              type="checkbox"
-              value={action}
-              onChange={props.onClick}
-              aria-label={action}
-            />
-            <label htmlFor={action}> {action}</label>
-          </React.Fragment>
-        ))}
+      <div className="tag-container">
+        <label className="video-page-tag-label">Actions:</label>
+        <div>
+          {actions.map((action) => (
+            <React.Fragment key={action}>
+              <input
+                className="checkbox"
+                type="checkbox"
+                value={action}
+                onChange={props.onClick}
+                aria-label={action}
+              />
+              <label htmlFor={action}> {action}</label>
+            </React.Fragment>
+          ))}
+        </div>
       </div>
     </div>
   );
