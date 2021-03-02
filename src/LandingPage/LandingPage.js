@@ -4,7 +4,7 @@ import "./LandingPage.css";
 
 export default function LandingPage() {
   const welcomeFont = {
-    fontSize: "28px",
+    fontSize: "22px",
   };
   return (
     <div>
