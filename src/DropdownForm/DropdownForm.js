@@ -22,7 +22,7 @@ export default function DropdownForm(props) {
   };
   return (
     <form className="dropdown_column">
-      <label>Refine your search:</label>
+      <label className="refine-label">Refine your search:</label>
       <DropdownFilter
         id={dropdownValues.positions.id}
         label={dropdownValues.positions.label}
