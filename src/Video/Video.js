@@ -11,7 +11,7 @@ export default function Video(props) {
       return (
         <div className="Video_image">
           <img
-            className="style-scope yt-img-shadow"
+            className="style-scope yt-img-shadow search-page-img"
             alt={title}
             width="200"
             src={src}
