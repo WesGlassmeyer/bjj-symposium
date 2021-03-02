@@ -23,3 +23,7 @@ form {
 label {
   color: white;
 }
+
+.refine-label {
+  margin-top: 1%;
+}
