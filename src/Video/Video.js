@@ -10,12 +10,14 @@ export default function Video(props) {
     if (renderVideoLink === "false") {
       return (
         <div className="Video_image">
-          <img
-            className="style-scope yt-img-shadow search-page-img"
-            alt={title}
-            width="200"
-            src={src}
-          />
+          <Link to={`/video/${props.video.id.videoId}`}>
+            <img
+              className="style-scope yt-img-shadow search-page-img"
+              alt={title}
+              width="200"
+              src={src}
+            />
+          </Link>
         </div>
       );
     } else {
