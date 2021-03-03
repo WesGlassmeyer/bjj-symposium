@@ -1,7 +1,9 @@
 .rating {
+  display: flex;
+  justify-content: center;
   color: white;
   padding: 0 1px;
   margin: 5%;
-  margin-left: 32%;
+  margin: 0 auto;
   font-size: 18px;
 }
