@@ -3,3 +3,21 @@ ul {
   padding-left: 0px;
   list-style-type: none;
 }
+
+.VideoList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media screen and (min-width: 400px) and (max-width: 1980px) {
+  .VideoList__list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .Video {
+    flex: calc(100% / 3);
+  }
+}
