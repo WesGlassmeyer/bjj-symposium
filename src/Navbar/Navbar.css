@@ -36,8 +36,7 @@
 }
 
 .nav-links:hover {
-  background-color: rgba(0, 0, 0, 0);
-  border-radius: 4px;
+  color: #af0000;
   transition: all 0.2s ease-out;
 }
 
@@ -86,9 +85,7 @@
 
   .navbar-logo {
     position: absolute;
-    /* top: 0; */
     left: 0;
-    /* transform: translate(10%, 10%); */
   }
 
   .menu-icon {
@@ -104,5 +101,9 @@
   .fa-times {
     color: #fff;
     font-size: 2rem;
+  }
+
+  .button1 {
+    margin-top: 0%;
   }
 }
