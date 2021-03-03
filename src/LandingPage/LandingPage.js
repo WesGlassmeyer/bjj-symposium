@@ -22,11 +22,11 @@ export default function LandingPage() {
           been approved by others in the community and help simplify your
           search.{" "}
         </p>
-        <div className="landing-page-button container">
+        <div className="landing-page-button-container">
           <button className="button1">
             <Link to="/search">Search</Link>
           </button>
-          <br></br>
+
           <button className="button1">
             <Link to="/community_favorites">Community Favorites</Link>
           </button>
