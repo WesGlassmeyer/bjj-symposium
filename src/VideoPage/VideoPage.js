@@ -1,9 +1,8 @@
 import React, { Component } from "react";
-import Video from "../Video/Video";
+import Iframe from "../Iframe/Iframe";
 import VideosContext from "../VideosContext";
 import "./VideoPage.css";
 import VideoPageForm from "../VideoPageForm/VideoPageForm";
-//import PropTypes from "prop-types";
 
 export default class VideoPage extends Component {
   static defaultProps = {
@@ -32,16 +31,9 @@ export default class VideoPage extends Component {
 
     return (
       <section className="VideoPage">
-        <ul>
-          <Video video={video} />
-        </ul>
+        <Iframe video={video} />
         <VideoPageForm video={video} />
       </section>
     );
   }
 }
-
-//VideoPage.propTypes = {
-//history: PropTypes.object,
-//match: PropTypes.object,
-//};
