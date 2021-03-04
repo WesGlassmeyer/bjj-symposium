@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# BJJ Symposium
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+https://bjj-symposium.vercel.app/
 
 ## Available Scripts
 
