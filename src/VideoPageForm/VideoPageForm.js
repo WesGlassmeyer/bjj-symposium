@@ -9,7 +9,7 @@ export default class VideoPageForm extends Component {
   static contextType = VideosContext;
   state = {
     title: this.props.video.snippet.title,
-    thumbnail: this.props.video.snippet.thumbnails.default.url,
+    thumbnail: this.props.video.snippet.thumbnails.high.url,
     youtube_id: this.props.video.id.videoId,
     rating: 1,
     tags: [],
@@ -34,7 +34,6 @@ export default class VideoPageForm extends Component {
           return response.json().then((error) => Promise.reject(error));
         return response.json();
       })
-      // .then((data) => this.context.addFolder(data))
       .catch((error) => {
         console.error({ error });
       });
