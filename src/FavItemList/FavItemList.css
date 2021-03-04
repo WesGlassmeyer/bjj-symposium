@@ -11,3 +11,21 @@ ul {
 .FavItemListLoad {
   color: white;
 }
+
+@media screen and (min-width: 800px) and (max-width: 1980px) {
+  .FavItemList__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .fav-item {
+    margin: 5% 5%;
+    max-width: 290px;
+  }
+
+  ul {
+    margin: 1% 5%;
+  }
+}
