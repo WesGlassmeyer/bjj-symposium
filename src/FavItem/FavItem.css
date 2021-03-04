@@ -1,10 +1,9 @@
 .fav-item {
   display: flex;
   flex-direction: column;
-  width: 100%;
   border: 1px solid rgba(175, 0, 0, 0.5);
   box-shadow: 0 0 20px #af0000;
-  margin-top: 10%;
+  margin: 10% 10%;
 }
 
 .Fav-page-tags {
@@ -28,41 +27,7 @@
   color: white;
 }
 
-/* .fav-item {
-  margin: 0 0 20px 0;
-  display: flex;
-  width: 100%;
+.fav-item:hover {
+  box-shadow: 0 0 30px #ca1a1a;
+  transition: all 0.1s ease-out;
 }
-
-.Fav-page-tags {
-  margin: 5%;
-}
-
-.style-scope {
-  height: 15vh;
-  width: auto;
-}
-
-.text-flex {
-  display: flex !important;
-  width: 50%;
-  margin-left: 10%;
-  flex-direction: column;
-  color: white;
-}
-
-.fav-page-img {
-  padding-top: auto;
-  margin-left: 5%;
-}
-
-.fav-item {
-  border: 1px solid rgba(175, 0, 0, 0.5);
-  box-shadow: 0 0 20px #af0000;
-  margin-top: 10%;
-}
-
-.text-flex a:visited {
-  color: white;
-}
- */
