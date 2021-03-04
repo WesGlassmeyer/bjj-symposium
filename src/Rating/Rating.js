@@ -5,11 +5,11 @@ import "./Rating.css";
 export default function Rating(props) {
   const stars = [0, 0, 0, 0, 0].map((_, i) =>
     i < props.value ? (
-      <span key={i} onClick={props.clickEvent} index={i}>
+      <span className="stars" key={i} onClick={props.clickEvent} index={i}>
         &#9733;{" "}
       </span>
     ) : (
-      <span key={i} onClick={props.clickEvent} index={i}>
+      <span className="stars" key={i} onClick={props.clickEvent} index={i}>
         &#9734;{" "}
       </span>
     )
