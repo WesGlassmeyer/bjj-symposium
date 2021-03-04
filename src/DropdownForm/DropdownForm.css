@@ -25,6 +25,10 @@ label {
 .refine-label {
   margin-top: 1%;
 }
+.drop-down-input:hover {
+  box-shadow: 0 0 20px #af0000;
+  transition: all 0.1s ease-out;
+}
 
 @media screen and (min-width: 800px) and (max-width: 1980px) {
   .dropdown_column {
