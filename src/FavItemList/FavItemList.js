@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import FavItem from "../FavItem/FavItem";
-// import dummydata from "../dummydata";
+import "./FavItemList.css";
 import config from "../config";
 
 class FavItemList extends Component {
