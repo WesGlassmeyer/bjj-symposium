@@ -13,3 +13,8 @@
   height: 30px;
   align-items: center;
 }
+
+.video-page-input:hover {
+  box-shadow: 0 0 20px #ca1a1a;
+  transition: all 0.1s ease-out;
+}
