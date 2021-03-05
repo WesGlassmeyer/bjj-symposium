@@ -1,8 +1,12 @@
 # BJJ Symposium
 
 Simplify your search for Brazilian Jiu Jitsu instructional videos. If you find a video you like then add it to the Community Favorites Page.
+
 This repo is the front-end client, built in React. You can see the app live at
+
 https://bjj-symposium.vercel.app/
+
+![](gif/demo.gif)
 
 ## Available Scripts
 
