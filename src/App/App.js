@@ -31,6 +31,7 @@ class App extends Component {
     });
   };
 
+  // Use a hardcoded query string unless query is built by dropdowns
   createQueryString = () => {
     let queryString = "";
     const { filterSelections } = this.state;
