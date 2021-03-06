@@ -6,6 +6,8 @@ This repo is the front-end client, built in React. You can see the app live at
 
 https://bjj-symposium.vercel.app/
 
+## Quick App Demo
+
 ![](gif/demo.gif)
 
 ## Technology
@@ -27,6 +29,10 @@ https://bjj-symposium.vercel.app/
 - Deployed via Vercel
 
 ## Getting Started
+
+Get an API key for YouTube by following the documentation https://developers.google.com/youtube/v3/getting-started
+
+Create an `env` file that includes REACT_APP_API_KEY=<your-api-key>
 
 Run `npm install` to load dependencies
 
