@@ -4,6 +4,8 @@
   border: 1px solid rgba(175, 0, 0, 0.5);
   box-shadow: 0 0 20px #af0000;
   margin: 10% 10%;
+  border-radius: 5%;
+  overflow: hidden;
 }
 
 .Fav-page-tags {
@@ -30,4 +32,8 @@
 .fav-item:hover {
   box-shadow: 0 0 30px #ca1a1a;
   transition: all 0.1s ease-out;
+}
+
+.avg-rating {
+  text-align: center;
 }
