@@ -26,7 +26,7 @@ export default class VideoPage extends Component {
       return video.id.videoId === videoId;
     });
     if (!video) {
-      return <section className="VideoPage">Loading...</section>;
+      return <section className="VideoPageLoad">Loading...</section>;
     }
 
     return (
