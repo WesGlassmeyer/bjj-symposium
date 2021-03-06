@@ -8,6 +8,10 @@ class VideoList extends Component {
 
   render() {
     const { videos } = this.context;
+
+    if (this.context.videos.length === 0) {
+      return <section className="VideoListLoad">Loading...</section>;
+    }
     return (
       <section className="VideoList">
         <ul className="VideoList__list" aria-live="polite">
