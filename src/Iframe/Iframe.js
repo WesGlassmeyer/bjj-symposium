@@ -6,7 +6,7 @@ export default function Iframe(props) {
   const title = props.video.snippet.title;
   return (
     <div className="Iframe">
-      <h3 className="Video_title">{props.video.snippet.title}</h3>
+      <h2 className="Video_title">{props.video.snippet.title}</h2>
       <div className="Video_link">
         <iframe
           className="responsive-iframe"
