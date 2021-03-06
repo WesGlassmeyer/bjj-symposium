@@ -8,6 +8,7 @@ class FavItemList extends Component {
     videos: [],
     error: null,
   };
+
   setVideos = (videos) => {
     this.setState({
       videos,
