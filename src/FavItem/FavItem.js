@@ -22,6 +22,7 @@ export default function FavItem(props) {
       </Link>
 
       <div className="text-flex">
+        <div className="avg-rating">Average Rating</div>
         <Rating value={props.favItem && props.favItem.rating} />
         <p className="Fav-page-tags">
           Tags: {props.favItem && props.favItem.tags.join(", ")}
