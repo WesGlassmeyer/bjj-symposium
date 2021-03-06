@@ -33,7 +33,7 @@ class FavItemList extends Component {
 
   render() {
     const favItems = this.state.videos;
-    if (this.state.videos === []) {
+    if (this.state.videos.length === 0) {
       return <section className="FavItemListLoad">Loading...</section>;
     }
 
