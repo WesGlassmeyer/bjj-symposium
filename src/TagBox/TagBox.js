@@ -11,10 +11,10 @@ export default function TagBox(props) {
       <div className="tag-container">
         <label className="video-page-tag-label">Positions:</label>
         <br></br>
-        {positions.map((position) => (
+        {positions.map((position, index) => (
           <React.Fragment key={position}>
             <input
-              id="checkbox"
+              id={position.index}
               type="checkbox"
               value={position}
               onChange={props.onClick}
